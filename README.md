@@ -432,13 +432,11 @@ F.  (Optional) Recommendation and purchase of AI Server hardware, then
 > **Step 1 --- Define the Team\
 > **Let the roster be:
 >
-> ![](images/media/image1.jpg){width="2.5520833333333335in"
-> height="0.4583333333333333in"}
+> ![](images/media/image1.jpg)
 >
 > Each player has a performance score:
 >
-> ![](images/media/image2.jpg){width="0.4270833333333333in"
-> height="0.3125in"}
+> ![](images/media/image2.jpg)
 >
 > where higher values mean:
 >
@@ -449,22 +447,18 @@ F.  (Optional) Recommendation and purchase of AI Server hardware, then
 >
 > Example:
 >
-> ![](images/media/image3.jpg){width="2.6875in"
-> height="0.40625in"}
+> ![](images/media/image3.jpg)
 >
 > So:
 
--   ![](images/media/image4.jpg){width="0.2916666666666667in"
-    height="0.23958333333333334in"} = best player
+-   ![](images/media/image4.jpg) = best player
 
--   ![](images/media/image5.jpg){width="0.3333333333333333in"
-    height="0.21875in"} = weakest player
+-   ![](images/media/image5.jpg) = weakest player
 
 > **Step 2 --- Normalize Talent\
 > **Convert talent into a probability weight:
 >
-> ![](images/media/image6.jpg){width="1.8125in"
-> height="0.78125in"}
+> ![](images/media/image6.jpg)
 >
 > This creates a distribution where the best players initially receive
 > the most play time.\
@@ -474,21 +468,17 @@ F.  (Optional) Recommendation and purchase of AI Server hardware, then
 > **Step 3 --- Introduce Game-Time Urgency\
 > **Define:
 
--   ![](images/media/image7.jpg){width="0.125in"
-    height="0.1875in"} = current time
+-   ![](images/media/image7.jpg) = current time
 
--   ![](images/media/image8.jpg){width="0.23958333333333334in"
-    height="0.21875in"} = total game duration
+-   ![](images/media/image8.jpg) = total game duration
 
--   ![](images/media/image9.jpg){width="0.46875in"
-    height="0.2916666666666667in"} = lead score margin
+-   ![](images/media/image9.jpg) = lead score margin
 
 > As the team becomes safer (large lead and little risk), the coach
 > increases fairness.\
 > Define a fairness coefficient:
 >
-> ![](images/media/image10.jpg){width="1.9791666666666667in"
-> height="0.75in"}
+> ![](images/media/image10.jpg)
 >
 > Interpretation:
 >
@@ -499,21 +489,17 @@ F.  (Optional) Recommendation and purchase of AI Server hardware, then
 > **Now we combine merit and fairness.**\
 > **Define player utilization probability:
 >
-> ![](images/media/image11.jpg){width="3.5208333333333335in"
-> height="0.7604166666666666in"}
+> ![](images/media/image11.jpg)
 >
 > where:
 >
-> ![](images/media/image12.jpg){width="1.6979166666666667in"
-> height="0.46875in"}
+> ![](images/media/image12.jpg)
 >
 > and:
 
--   ![](images/media/image13.jpg){width="0.8233902012248469in"
-    height="0.28030293088363956in"} early in a close game
+-   ![](images/media/image13.jpg) early in a close game
 
--   ![](images/media/image14.jpg){width="0.808924978127734in"
-    height="0.2348490813648294in"} late in a blowout
+-   ![](images/media/image14.jpg) late in a blowout
 
 > This equation says:
 
@@ -525,13 +511,11 @@ F.  (Optional) Recommendation and purchase of AI Server hardware, then
 > **To guarantee every player enters before the clock expires:\
 > Define cumulative play participation:
 >
-> ![](images/media/image15.jpg){width="2.3125in"
-> height="0.8645833333333334in"}
+> ![](images/media/image15.jpg)
 >
 > Constraint:
 >
-> ![](images/media/image16.jpg){width="2.40625in"
-> height="0.5833333333333334in"}
+> ![](images/media/image16.jpg)
 >
 > Meaning:\
 > Every player must receive nonzero play time before game ends.
@@ -539,18 +523,15 @@ F.  (Optional) Recommendation and purchase of AI Server hardware, then
 > **Step 6 --- Compact Representation\
 > **Here's a more compact formulation:
 >
-> ![](images/media/image17.jpg){width="4.145833333333333in"
-> height="0.8958333333333334in"}
+> ![](images/media/image17.jpg)
 >
 > subject to:
 >
-> ![](images/media/image18.jpg){width="1.53125in"
-> height="0.53125in"}
+> ![](images/media/image18.jpg)
 >
 > and:
 >
-> ![](images/media/image19.jpg){width="3.53125in"
-> height="0.90625in"}
+> ![](images/media/image19.jpg)
 >
 > **Interpretation in Plain English**
 >
@@ -563,13 +544,11 @@ F.  (Optional) Recommendation and purchase of AI Server hardware, then
 > **Visually Similar Mathematical Block\
 > **Here is the core scheduling equation in a clean technical style:
 >
-> ![](images/media/image20.jpg){width="3.7395833333333335in"
-> height="0.5520833333333334in"}
+> ![](images/media/image20.jpg)
 >
 > And the fairness guarantee:
 >
-> ![](images/media/image21.jpg){width="3.28125in"
-> height="0.5833333333333334in"}
+> ![](images/media/image21.jpg)
 >
 > **Conceptually, This Algorithm Represents\
 > **A hybrid of:\
